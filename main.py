@@ -5,7 +5,9 @@ import model as model
 def main(file):
     x = dp.process_string(file)
     ft = fe.get_tag_info(x)
-    pr = model.train(ft)[0] 
+    pr = model.train(ft)[0]
     if pr == 1:
-        return true:
-    return false; 
+        return true;
+    return false;
+
+

@@ -2,17 +2,14 @@
 #   Lexicosyntatic, semantic and other Feature Extraction 
 #==============================================================================
 
-import os
-import nltk
-import data_process as dp
-import argparse
-import numpy as np
-import pandas as pd
 import math
-from scipy import spatial
-from nltk.corpus import brown
 from collections import Counter
-from nltk.stem.wordnet import WordNetLemmatizer 
+
+import nltk
+import numpy as np
+from nltk.corpus import brown
+from nltk.stem.wordnet import WordNetLemmatizer
+
 lmtzr = WordNetLemmatizer()
 
 # POS TAGS
@@ -45,8 +42,7 @@ def similarity(content, POS_tag):
             
     return local_pos_vec         
 
-def get_tag_info(input):    
-    
+def get_tag_info(input):
     # ----------------- Initialize ---------------
     input_text = input[0]
     data = nltk.word_tokenize(input_text) # the string produced by process_string separated into a list of words
